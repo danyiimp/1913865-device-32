@@ -68,6 +68,10 @@ body {
   width: 1160px;
 }
 
+.navigation-search {
+  width: 480px;
+}
+
 .navigation-list {
   font-family: "Rubik";
   font-weight: 400;
@@ -164,6 +168,8 @@ body {
 }
 
 .slider-link {
+  display: block;
+  width: 220px;
   font-family: "Raleway";
   line-height: 21px;
   text-align: center;
@@ -175,8 +181,13 @@ body {
   border-spacing: 0;
 }
 
+.slider-table-head {
+  display: table-footer-group;
+}
+
 .slider-table-row-title {
   font-size: 16px;
+  font-weight: 400;
 }
 
 .slider-table-cell {
@@ -402,6 +413,11 @@ body {
   width: 560px;
 }
 
+.subscribe-button {
+  display: block;
+  width: 260px;
+}
+
 /* footer */
 
 .footer-navigation-list {
@@ -484,6 +500,11 @@ body {
 
 /* main-inner */
 
+.page-inner-container {
+  width: 1100px;
+  margin-left: auto;
+}
+
   /* inner-header */
 
 .inner-header-title {
@@ -495,13 +516,29 @@ body {
 }
 
 .breadcrumbs {
+  display: flex;
   font-size: 16px;
   line-height: 19px;
   opacity: 0.6;
+  padding-inline-start: 0;
+}
+
+.breadcrumbs-item {
+  margin-right: 35px;
 }
   /* inner header*/
 
+.catalog-left-column {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.catalog-right-column {
+  width: 100%;
+}
+
 .catalog-products {
+  display: flex;
   font-size: 16px;
   line-height: 19px;
   color: #000000;
@@ -522,9 +559,24 @@ body {
   background-color: #E5E5E5;
 }
 
+.button-show {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+
+}
+
 .sorting-type-background {
   background-color: #EBEBEB;
 }
+
+.sorting-type {
+  display: flex;
+}
+
+/* .sorting-type > label {
+  margin-right
+} */
 
 .catalog-filter-title {
   font-size: 18px;
@@ -550,12 +602,29 @@ body {
   line-height: inherit;
 }
 
+.products-container {
+  width: 760px;
+  margin-left: auto;
+  justify-content: space-between;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-inline-start: 0px;
+}
+
 .product-card {
+  width: 360px;
   background-color: #FFFFFF;
 }
 
 .product-card-name {
+  display: inline-block;
+  width: 280px;
   font-size: 18px;
+  font-weight: 700f;
   line-height: 24px;
   letter-spacing: -0.02em;
 }
@@ -580,12 +649,33 @@ body {
 }
 
 .button-load-more {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;;
   font-size: 16px;
   line-height: 19px;
 }
 
 .pagination {
+  display: flex;
+  justify-content: center;
+  padding-inline-start: 0px;
   color: #444444;
+}
+
+.pagination-item {
+  margin-left: 30px;
+}
+
+.pagination > .pagination-item:nth-child(1) {
+  margin-left: 30px;
+  margin-right: auto;
+}
+
+.pagination > .pagination-item:nth-child(7) {
+  margin-right: 30px;
+  margin-left: auto;
 }
 
 .pagination-moving {
