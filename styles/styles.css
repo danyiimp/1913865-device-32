@@ -30,6 +30,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  min-width: 1440px;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   line-height: 30px;
@@ -175,15 +176,24 @@ body {
 }
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 40px 480px 40px 600px;
+  grid-template-rows: auto;
   margin-bottom: 70px;
+}
+
+.slider-image {
+  grid-column: 1/4;
+  grid-row: 1/2;
 }
 
 .slider-pagination {
   display: flex;
+  margin: 0;
   padding: 0;
   list-style-type: none;
+  grid-column: 4/5;
+  grid-row: 1/2;
 }
 
 .slider-pagination-item:not(:last-child) {
@@ -191,14 +201,21 @@ body {
 }
 
 .slider-prev {
-  order: 1;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  z-index: 1;
+
 }
 
 .slider-next {
-  order: 1;
+  grid-column: 3/4;
+  grid-row: 1/2;
+  z-index: 1;
 }
 
 .slider-list {
+  grid-column: 4/5;
+  grid-row: 1/2;
   margin: 0;
   padding: 0;
   padding-left: 40px;
@@ -624,11 +641,23 @@ body {
 
 .footer-social-list {
   display: flex;
+  justify-self: center;
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-.inner-footer-social {
-  display: flex;
+
+.footer-social {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.button-social {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
 }
 
 .footer-decoration {
@@ -644,6 +673,7 @@ body {
 
 .page-footer {
   padding-top: 62px;
+  margin-top: auto;
   color: #FFFFFF;
   background-color: #444444;
 }
@@ -717,7 +747,13 @@ body {
 }
 
 .catalog-products {
+  --gradient-bp: calc(50% - 252px);
   display: grid;
+  background-image:
+  linear-gradient(to right, #DCDCDC var(--gradient-bp), #EBEBEB var(--gradient-bp)),
+  linear-gradient(to right, #EBEBEB var(--gradient-bp), transparent var(--gradient-bp));
+  background-size: 100% 70px, 100% 100%;
+  background-repeat: no-repeat;
   grid-template-columns: 1fr 328px 832px 1fr;
   grid-template-rows: 70px 1fr;
   font-size: 16px;
@@ -762,8 +798,9 @@ body {
   grid-row-start: 2;
 
   width: 760px;
-  margin-left: auto;
-  justify-content: space-between;
+  margin-left: 72px;
+  margin-bottom: 77px;
+  margin-top: 69px;
 }
 
 
@@ -819,16 +856,15 @@ COLORS
 }
 
 .product-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto auto ;
+  gap: 40px;
   padding: 0px;
   margin: 0;
   list-style-type: none;
 }
 
 .product-card {
-  margin-top: 69px;
   width: 360px;
   background-color: #FFFFFF;
 }
@@ -885,7 +921,6 @@ COLORS
 .pagination {
   display: flex;
   margin: 0;
-  margin-bottom: 77px;
 
   height: 70px;
   background-color: #EBEBEB;
