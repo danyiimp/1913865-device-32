@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
@@ -8,7 +9,7 @@
 
   <body>
     <header class="page-header">
-      <div class="header-container header-contacts">
+      <div class="header-container header-catalog">
         <div class="header-inner">
           <h1 class="header-title">
             <img class="logo-device" src="img/logos/logo-device.svg" width="145px" height="36px"
@@ -45,14 +46,17 @@
                   <summary class="navigation-summary">
                     <span class="visually-hidden">Подкатегории</span>
                   </summary>
-                  <ul class="navigation-list navigation-sublist">
-                    <li class="navigation-subitem"><a href="" class="link navigation-link">Виртуальная реальность</a></li>
-                    <li class="navigation-subitem"><a href="" class="link navigation-link">Моноподы для cелфи</a></li>
-                    <li class="navigation-subitem"><a href="" class="link navigation-link">Экшн-камеры</a></li>
-                    <li class="navigation-subitem"><a href="" class="link navigation-link">Фитнес-браслеты</a></li>
-                    <li class="navigation-subitem"><a href="" class="link navigation-link">Умные часы</a></li>
-                    <li class="navigation-subitem"><a href="" class="link navigation-link">Квадрокоптеры</a></li>
-                  </ul>
+                  <div class="navigation-sublist-wrapper">
+                    <ul class="navigation-list navigation-sublist">
+                      <li class="navigation-subitem"><a href="" class="link navigation-link">Виртуальная реальность</a>
+                      </li>
+                      <li class="navigation-subitem"><a href="" class="link navigation-link">Моноподы для cелфи</a></li>
+                      <li class="navigation-subitem"><a href="" class="link navigation-link">Экшн-камеры</a></li>
+                      <li class="navigation-subitem"><a href="" class="link navigation-link">Фитнес-браслеты</a></li>
+                      <li class="navigation-subitem"><a href="" class="link navigation-link">Умные часы</a></li>
+                      <li class="navigation-subitem"><a href="" class="link navigation-link">Квадрокоптеры</a></li>
+                    </ul>
+                  </div>
                 </details>
               </li>
               <li class="navigation-item">
@@ -87,7 +91,7 @@
       </header>
       <section class="catalog-products">
         <h3 class="visually-hidden">Список товаров с фильтрами</h3>
-        <p class="catalog-subtitle-filter">Фильтр</p>
+        <p class="catalog-subtitle-filter">Фильтр:</p>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Стоимость</legend>
@@ -168,17 +172,26 @@
           <button class="button button-show" type="submit">Показать</button>
         </form>
 
-        <form class="sorting-type">
-          <label for="sorting">
-            <p class="catalog-subtitle-sorting">Сортировка</p>
-          </label>
-          <select class="select-control" id="sorting" name="sorting">
-            <option value="popular">Сначала популярные</option>
-            <option value="cheap">Сначала дешёвые</option>
-            <option value="expensive">Сначала дорогие</option>
-          </select>
-          <button class="visually-hidden" type="submit">Отсортировать продукты</button>
-        </form>
+        <div class="sorting-wrapper">
+          <form class="sorting-type">
+            <label for="sorting">
+              <p class="catalog-subtitle-sorting">Сортировка:</p>
+            </label>
+            <select class="select-control" id="sorting" name="sorting">
+              <option value="popular">Сначала популярные</option>
+              <option value="cheap">Сначала дешёвые</option>
+              <option value="expensive">Сначала дорогие</option>
+            </select>
+            <button class="visually-hidden" type="submit">Отсортировать продукты</button>
+          </form>
+
+          <button class="button sort-up" type="button">
+            <span class="visually-hidden">Отсортировать по возрастанию</span>
+          </button>
+          <button class="button sort-down sort-active" type="button">
+            <span class="visually-hidden">Отсортировать по убыванию</span>
+          </button>
+        </div>
 
         <div class="products-container">
           <ul class="product-list">
@@ -209,7 +222,7 @@
                 </div>
               </a>
             </li>
-            <li class="product-card">
+            <li class="product-card product-card-new">
               <a class="link product-card-link" href="product.html">
                 <img class="product-card-image" src="img/products/product-4.jpg" alt="">
                 <div class="product-card-name-price-wrapper">
@@ -217,7 +230,6 @@
                   <span class="product-card-price">4900 ₽</span>
                 </div>
               </a>
-              <span class="product-card-new">new</span>
             </li>
           </ul>
           <button class="button button-load-more" type="button">Загрузить еще</button>
@@ -284,10 +296,14 @@
 
         <section class="footer-social">
           <p class="visually-hidden">Наши социальные сети</p>
-          <div class="footer-decoration"></div> <!--Тут через псевдо можно сделать-->
           <ul class="footer-social-list">
             <li class="footer-social-item">
               <a class="button button-social" href="https://www.facebook.com/htmlacademy">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M22.5 14H25v-3h-3.4c-2.8 0-3.6 1.7-3.6 4.2V17h-2v3h2v9h3v-9h3.3l.6-3H21v-1.5c0-.8.3-1.5 1.5-1.5Z"
+                    fill="#444" />
+                </svg>
                 <span class="visually-hidden">
                   Фейсбук
                 </span>
@@ -295,6 +311,12 @@
             </li>
             <li class="footer-social-item">
               <a class="button button-social" href="https://www.instagram.com/htmlacademy">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 22a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="#444" />
+                  <path
+                    d="M26.7 13.3c-.9-.9-2-1.3-3.4-1.3h-6.6c-2.8 0-4.7 1.9-4.7 4.7v6.6c0 1.4.4 2.6 1.4 3.4.9.9 2 1.3 3.3 1.3h6.6c1.4 0 2.6-.4 3.4-1.3.8-.9 1.3-2 1.3-3.4v-6.6c0-1.4-.4-2.6-1.3-3.4ZM20 24.1c-2.2 0-4.1-1.8-4.1-4.1s1.9-4.1 4.1-4.1c2.2 0 4.1 1.8 4.1 4.1s-1.9 4.1-4.1 4.1Zm4.6-7.4c-.7 0-1.3-.5-1.3-1.3s.5-1.3 1.3-1.3c.7 0 1.3.6 1.3 1.3 0 .7-.6 1.3-1.3 1.3Z"
+                    fill="#444" />
+                </svg>
                 <span class="visually-hidden">
                   Инстаграм
                 </span>
@@ -302,6 +324,11 @@
             </li>
             <li class="footer-social-item">
               <a class="button button-social" href="https://twitter.com/htmlacademy_ru">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M22.7 13.1c1.5-.5 2.6.3 3.2 1.1.5-.2 1.1-.4 1.7-.6 0 .8-.5 1.4-.8 1.6.7.2 1.2-.4 1.2-.4-.1.9-.9 1.7-1.4 1.9-.2 6.3-2.8 10.4-8.9 10.3h-.4c-.3 0-3.7-.4-4.3-1.8 2 .2 3.4-.4 4.1-1.1-.8-.3-2.4-.4-2.6-2.8.3.2.5.3 1.1.2-1.1-.8-2.3-1.5-2.2-3.5.3.3.9.5 1.2.4-.6-.2-1.8-3.1-.8-4.6 1.6 1.7 3.3 3.4 6.3 3.5.2-2.1 1-3.5 2.6-4.2Z"
+                    fill="#444" />
+                </svg>
                 <span class="visually-hidden">
                   Твиттер
                 </span>
@@ -309,10 +336,12 @@
             </li>
           </ul>
           <a class="link logo-link" href="https://htmlacademy.ru/">
-            <img class="logo-html-academy" src="img/logos/logo-html-academy.svg" width="115px" height="33px" alt="Логотип .html academy">
+            <img class="logo-html-academy" src="img/logos/logo-html-academy.svg" width="115px" height="33px"
+              alt="Логотип .html academy">
           </a>
         </section>
       </div>
     </footer>
   </body>
+
 </html>
