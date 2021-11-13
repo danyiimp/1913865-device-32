@@ -26,6 +26,7 @@
                   </label>
                   <input class="navigation-search" type="search" name="navigation-search" id="navigation-search"
                     placeholder="Поиск по сайту">
+                  <button class="button-search" type="submit">Найти</button>
                 </form>
               </li>
               <li class="navigation-item">
@@ -42,7 +43,7 @@
             <ul class="navigation-list navigation-main">
               <li class="navigation-item">
                 <a class="link navigation-link" href="catalog.html">Каталог товаров</a>
-                <details class="navigation-details">
+                <details class="navigation-details" open>
                   <summary class="navigation-summary">
                     <span class="visually-hidden">Подкатегории</span>
                   </summary>
@@ -95,18 +96,34 @@
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Стоимость</legend>
-            <button class="range-toggle toggle-min" type="button">
-              <span class="visually-hidden">Изменить минимальную цену.</span>
-            </button>
-            <button class="range-toggle toggle-max" type="button">
-              <span class="visually-hidden">Изменить максимальную цену.</span>
-            </button>
-            <label class="catalog-filter-label">
-              от <input class="catalog-filter-input" type="number" name="min-price" value="0"> ₽
-            </label>
-            <label class="catalog-filter-label">
-              до <input class="catalog-filter-input" type="number" name="max-price" value="5000"> ₽
-            </label>
+
+            <div class="range">
+              <div class="range-scale">
+                <div class="range-bar" style="left: 0px; width: 119px">
+                  <button class="range-toggle toggle-min">
+                    <span class="visually-hidden">Изменить минимальную цену.</span>
+                    <!-- <span class="catalog-filter-price">
+                      от 0
+                    </span> -->
+                    <label class="catalog-filter-label">
+                      <span>от&nbsp;</span>
+                      <input readonly class="catalog-filter-input" type="number" name="min-price" value="0" style="width: 24px">
+                    </label>
+                  </button>
+                  <button class="range-toggle toggle-max">
+                    <span class="visually-hidden">Изменить максимальную цену.</span>
+                    <!-- <span class="catalog-filter-price">
+                      до 5000
+                    </span> -->
+                    <label class="catalog-filter-label">
+                      <span>до&nbsp;</span>
+                      <input readonly class="catalog-filter-input" type="number" name="max-price" value="5000" style="width: 52px">
+                    </label>
+                  </button>
+                </div>
+              </div>
+            </div>
+
           </fieldset>
 
           <fieldset class="catalog-filter-group">
@@ -115,6 +132,7 @@
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="visually-hidden control-input" type="checkbox" name="black" checked>
+                  <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z" fill="#000"/></svg>
                   <span class="control-mark"></span>
                   <span class="control-label">Черный</span>
                 </label>
@@ -122,6 +140,7 @@
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="visually-hidden control-input" type="checkbox" name="white" checked>
+                  <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z" fill="#000"/></svg>
                   <span class="control-mark"> </span>
                   <span class="control-label">Белый</span>
                 </label>
@@ -129,6 +148,7 @@
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="visually-hidden control-input" type="checkbox" name="blue">
+                  <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z" fill="#000"/></svg>
                   <span class="control-mark"></span>
                   <span class="control-label">Синий</span>
                 </label>
@@ -136,6 +156,7 @@
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="visually-hidden control-input" type="checkbox" name="red">
+                  <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z" fill="#000"/></svg>
                   <span class="control-mark"></span>
                   <span class="control-label">Красный</span>
                 </label>
@@ -143,6 +164,7 @@
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="visually-hidden control-input" type="checkbox" name="pink">
+                  <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z" fill="#000"/></svg>
                   <span class="control-mark"></span>
                   <span class="control-label">Розовый</span>
                 </label>
