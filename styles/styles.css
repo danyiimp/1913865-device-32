@@ -109,6 +109,14 @@ img {
   margin-left: 2px;
 }
 
+.header-logo-link {
+  display: block;
+  width: 145px;
+  margin-top: -24px;
+  margin-bottom: 17px;
+  margin-left: 2px;
+}
+
 .navigation-search::-webkit-input-placeholder {
   font-weight: normal;
   font-size: 16px;
@@ -250,6 +258,7 @@ img {
 .authorized .navigation-user-item:nth-child(3) {
   position: relative;
   left: 20px;
+
   opacity: 0.3;
 }
 
@@ -1556,6 +1565,9 @@ img {
 }
 
 .footer-navigation-item:nth-child(5) {
+  position: relative;
+  left: 15px;
+
   min-width: 200px;
 
   text-align: right;
@@ -1721,10 +1733,29 @@ img {
 }
 
 .footer-contacts-number-link {
+  padding: 3px 15px 5px 15px;
+
   font-style: normal;
   font-size: 16px;
   color: inherit;
+
+  border-radius: 25px;
 }
+
+.footer-contacts-number-link:not(:active):focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #af4fff;
+}
+
+.footer-contacts-number-link:hover {
+  color: #ffc700;
+}
+
+.footer-contacts-number-link:active {
+  outline: none;
+  opacity: 0.3;
+}
+
 
 /* main-inner */
 
@@ -2090,34 +2121,30 @@ img {
 
 /* Checkbox hover */
 
-.control-input[type="checkbox"]:checked:not(:active):hover ~ .control-label {
+.control-input[type="checkbox"]:checked:not(:active):not(:disabled):hover ~ .control-label {
   opacity: 0.5;
 }
 
-.control-input[type="checkbox"]:checked:not(:active):hover ~ .control-mark {
+.control-input[type="checkbox"]:checked:not(:active):not(:disabled):hover ~ .control-mark {
   opacity: 0.5;
 }
 
-.control-input[type="checkbox"]:checked:not(:active):hover ~ svg path {
+.control-input[type="checkbox"]:checked:not(:active):not(:disabled):hover ~ svg path {
   fill-opacity: 0.5;
 }
 
 /*Checkbox active*/
 
-.control-input[type="checkbox"]:active ~ .control-label {
+.control-input[type="checkbox"]:not(:disabled):active ~ .control-label {
   opacity: 0.2;
 }
 
-.control-input[type="checkbox"]:active ~ .control-mark {
+.control-input[type="checkbox"]:not(:disabled):active ~ .control-mark {
   opacity: 0.2;
 }
 
-.control-input[type="checkbox"]:active ~ svg path {
+.control-input[type="checkbox"]:not(:disabled):active ~ svg path {
   fill-opacity: 0.2;
-}
-
-.control-input:disabled ~ .control-mark {
-  border-color: #000000;
 }
 
 .control-input[type="checkbox"] + svg {
@@ -2170,22 +2197,29 @@ img {
 
 /* radio hover */
 
-.control-input[type="radio"]:checked:not(:active):hover ~ .control-label {
+.control-input[type="radio"]:checked:not(:active):not(:disabled):hover ~ .control-label {
   opacity: 0.5;
 }
 
-.control-input[type="radio"]:checked:not(:active):hover ~ .control-mark {
+.control-input[type="radio"]:checked:not(:active):not(:disabled):hover ~ .control-mark {
   opacity: 0.5;
 }
 
 /*radio active*/
 
-.control-input[type="radio"]:active ~ .control-label {
+.control-input[type="radio"]:not(:disabled):active ~ .control-label {
   opacity: 0.2;
 }
 
-.control-input[type="radio"]:active ~ .control-mark {
+.control-input[type="radio"]:not(:disabled):active ~ .control-mark {
   opacity: 0.2;
+}
+
+.control .control-input[disabled] ~ *,
+.control .control-input:disabled ~ *,
+.control .control-input[disabled] ~ .control-mark,
+.control .control-input:disabled ~ .control-mark {
+  opacity: 0.1;
 }
 
 /* Label */

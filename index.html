@@ -10,16 +10,17 @@
 
   <body>
     <header class="page-header">
+      <h1 class="visually-hidden">Интернет-магазин гаджетов device</h1>
       <div class="header-container">
         <div class="header-inner">
-          <h1 class="header-title">
+          <div class="header-title">
             <img class="logo-device" src="img/logos/logo-device.svg" width="145" height="36"
-              alt="Логотип интернет-магазина гаджетов device">
-          </h1>
+              alt="Логотип интернет-магазина гаджетов device.">
+          </div>
           <nav class="navigation">
             <ul class="navigation-list navigation-user">
               <li class="navigation-user-item">
-                <form class="navigation-form" action="https://echo.htmlacademy.ru/" method="post">
+                <form class="navigation-form" action="https://echo.htmlacademy.ru/" method="get">
                   <label for="navigation-search">
                     <span class="visually-hidden">
                       Поиск
@@ -113,10 +114,10 @@
       <div class="page-container">
         <section class="gallery">
           <h2 class="visually-hidden">Галлерея товаров</h2>
-          <img class="slider-image" src="img/main-slider/slider-1.png" width="560" height="560" alt="Примеры товаров">
-          <img class="slider-image" src="img/main-slider/slider-2.png" width="560" height="560" alt="Примеры товаров"
+          <img class="slider-image" src="img/main-slider/slider-1.png" width="560" height="560" alt="Квадрокоптер.">
+          <img class="slider-image" src="img/main-slider/slider-2.png" width="560" height="560" alt="Умные часы."
             hidden>
-          <img class="slider-image" src="img/main-slider/slider-3.png" width="560" height="560" alt="Примеры товаров"
+          <img class="slider-image" src="img/main-slider/slider-3.png" width="560" height="560" alt="Селфи-палки."
             hidden>
           <!--Класс .slider-button-special добавляется для кнопок
               на 3-м слайде-->
@@ -222,19 +223,19 @@
           <ol class="slider-pagination">
             <li class="slider-pagination-item">
               <button class="slider-pagination-button slider-pagination-button-current" type="button">
-                <span class="visually-hidden">Промо товар</span>
+                <span class="visually-hidden">Первый товар</span>
               </button>
             </li>
 
             <li class="slider-pagination-item">
               <button class="slider-pagination-button" type="button">
-                <span class="visually-hidden">Промо товар</span>
+                <span class="visually-hidden">Второй товар</span>
               </button>
             </li>
 
             <li class="slider-pagination-item">
               <button class="slider-pagination-button" type="button">
-                <span class="visually-hidden">Промо товар</span>
+                <span class="visually-hidden">Третий товар</span>
               </button>
             </li>
           </ol>
@@ -454,7 +455,7 @@
     <footer class="page-footer">
       <div class="page-container">
         <img class="footer-logo-device" src="img/logos/footer-logo-device.svg" width="145" height="36"
-          alt="Логотип интернет-магазина гаджетов device">
+          alt="Логотип интернет-магазина гаджетов device.">
 
         <section class="footer-navigation">
           <p class="visually-hidden">Контакты</p>
@@ -546,11 +547,11 @@
           </button>
           <fieldset class="modal-fieldset">
             <legend class="visually-hidden">Доставка</legend>
-            <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
+            <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
               <div class="modal-form-inner">
                 <label class="modal-form-label">
                   <span class="modal-label-desc">Ваше имя:</span>
-                  <input class="modal-form-input" type="text" placeholder="Имя Фамилия" name="name">
+                  <input class="modal-form-input" type="text" placeholder="Имя Фамилия" name="name" required>
                   <svg class="modal-form-input-icon" width="13" height="12" viewBox="0 0 13 12" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -573,7 +574,7 @@
                 </label>
                 <label class="modal-form-label">
                   <span class="modal-label-desc">Что нужно привезти:</span>
-                  <input class="modal-form-input" type="text" placeholder="В свободной форме" name="order">
+                  <input class="modal-form-input" type="text" placeholder="В свободной форме" name="order" required>
                 </label>
                 <div class="modal-form-label">
                   <span class="modal-form-label-inner">
@@ -589,7 +590,7 @@
                       <span class="visually-hidden">Уменьшить количество товара</span>
                     </button>
                     <input class="modal-form-input" type="number" name="count" placeholder=" " value="1"
-                      id="modal-input-count">
+                      required id="modal-input-count">
                     <button class="modal-button-input modal-button-plus" type="button">
                       <span class="visually-hidden">Увеличить количество товара</span>
                     </button>

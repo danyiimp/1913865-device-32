@@ -10,16 +10,17 @@
 
   <body>
     <header class="page-header">
+      <h1 class="visually-hidden">Страница каталога</h1>
       <div class="header-container header-catalog">
         <div class="header-inner">
-          <h1 class="header-title">
+          <a class="link header-logo-link" href="index.html">
             <img class="logo-device" src="img/logos/logo-device.svg" width="145" height="36"
-              alt="Логотип интернет-магазина гаджетов device">
-          </h1>
+              alt="Логотип интернет-магазина гаджетов device.">
+          </a>
           <nav class="navigation">
             <ul class="navigation-list navigation-user authorized">
               <li class="navigation-user-item">
-                <form class="navigation-form" action="https://echo.htmlacademy.ru/" method="post">
+                <form class="navigation-form" action="https://echo.htmlacademy.ru/" method="get">
                   <label for="navigation-search">
                     <span class="visually-hidden">
                       Поиск
@@ -206,7 +207,7 @@
         </form>
 
         <div class="sorting-wrapper">
-          <form class="sorting-type">
+          <form class="sorting-type" action="https://echo.htmlacademy.ru/" method="get">
             <label for="sorting">
               <span class="catalog-subtitle-sorting">Сортировка:</span>
             </label>
@@ -312,7 +313,7 @@
     <footer class="page-footer">
       <div class="page-container">
         <img class="footer-logo-device" src="img/logos/footer-logo-device.svg" width="145" height="36"
-          alt="Логотип интернет-магазина гаджетов device">
+          alt="Логотип интернет-магазина гаджетов device.">
 
         <section class="footer-navigation">
           <p class="visually-hidden">Контакты</p>
