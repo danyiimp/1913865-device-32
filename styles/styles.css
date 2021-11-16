@@ -234,6 +234,25 @@ img {
   grid-template-columns: 500px 160px 160px 100px;
 }
 
+.authorized {
+  gap: 0;
+  grid-template-columns: 540px 140px 60px 160px 140px;
+}
+
+.authorized .navigation-user-item:last-child {
+  left: 22px;
+}
+
+.authorized .navigation-user-item:nth-child(2) .navigation-link {
+  width: 160px;
+}
+
+.authorized .navigation-user-item:nth-child(3) {
+  position: relative;
+  left: 20px;
+  opacity: 0.3;
+}
+
 .navigation-link {
   display: block;
   width: min-content;
@@ -274,7 +293,7 @@ img {
   opacity: 0.3;
 }
 
-.navigation-user-item:nth-child(3) .navigation-link {
+.navigation-user-item:nth-last-child(2) .navigation-link {
   box-sizing: border-box;
   min-width: 136px;
   padding-left: 41px;
@@ -284,14 +303,14 @@ img {
   background-position: left 21px top 50%;
 }
 
-.navigation-user-item:nth-child(3) {
+.navigation-user-item:nth-last-child(2) {
   position: relative;
   right: -15px;
 
   margin-left: auto;
 }
 
-.navigation-user-item:nth-child(4) .navigation-link {
+.navigation-user-item:last-child .navigation-link {
   box-sizing: border-box;
   min-width: 131px;
   padding-left: 44px;
@@ -301,14 +320,14 @@ img {
   background-position: left 19px top 11px;
 }
 
-.navigation-user-item:nth-child(4) {
+.navigation-user-item:last-child {
   position: relative;
   left: -9px;
 
   margin-left: auto;
 }
 
-.navigation-user-item:nth-child(4) .navigation-link::before {
+.navigation-user-item:last-child .navigation-link::before {
   content: "2";
   position: absolute;
   top: 10px;
@@ -3165,7 +3184,7 @@ img {
 
 .popover-cart {
   position: absolute;
-  right: calc(100% - 20px);
+  right: calc(100% - 30px);
   bottom: -3px;
   z-index: 3;
 
@@ -3247,7 +3266,7 @@ img {
   box-sizing: border-box;
   width: 25px;
   height: 25px;
-  margin-left: 12px;
+  margin-left: 7px;
 
   background-color: transparent;
   background-image: url("../img/icons/delete.svg");
